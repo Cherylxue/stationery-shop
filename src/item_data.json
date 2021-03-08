@@ -1,0 +1,14 @@
+{
+  "items": [
+    { "Id": 1, "Name": "Check Pattern Washi Tape", "Price": 2.49 },
+    { "Id": 2, "Name": "Wooden Numeric Stamp", "Price": 8.99 },
+    { "Id": 3, "Name": "Non-Sticky Fairy Tale Note Pad", "Price": 4.49 },
+    { "Id": 4, "Name": "Parchment Stickers Animal in Nature", "Price": 2.99 },
+    { "Id": 5, "Name": "Washi Tape Classic Stories", "Price": 3.99 },
+    { "Id": 6, "Name": "Colorful Multishaped Sticky Note Pad", "Price": 3.99 },
+    { "Id": 7, "Name": "Floral Shape Sticky Note Pad", "Price": 4.49 },
+    { "Id": 8, "Name": "Fake Non-Sticky Art Postal Stamps", "Price": 4.49 },
+    { "Id": 9, "Name": "Non-Sticky Galaxy Note Pad", "Price": 3.49 },
+    { "Id": 10, "Name": "Vintage Tearable Framed Note Pad", "Price": 4.99 }
+  ]
+}
