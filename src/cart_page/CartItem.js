@@ -2,15 +2,16 @@ import React, { useState, useEffect } from "react";
 import { Card, Button } from "react-bootstrap";
 function CartItem(props) {
   const [itemInfo, setItemInfo] = useState({});
+  const { data, itemId, quantity } = props;
 
   useEffect(() => {
     // console.log(props.data);
-    props.data.forEach((element) => {
-      if (element.Id.toString() === props.itemId && props.quantity > 0) {
+    data.forEach((element) => {
+      if (element.Id.toString() === itemId && quantity > 0) {
         setItemInfo(element);
       }
     });
-  }, [props.quantity]);
+  }, [quantity, data, itemId]);
 
   return (
     <Card style={{ width: "18rem" }}>
@@ -18,15 +19,11 @@ function CartItem(props) {
       <Card.Body>
         <Card.Title>{itemInfo.Name}</Card.Title>
         <h5>Price: ${itemInfo.Price}</h5>
-        <label>Quantity: {props.quantity}</label>
+        <label>Quantity: {quantity}</label>
         <Button variant="secondary" onClick={props.add} itemID={props.itemId}>
           +
         </Button>
-        <Button
-          variant="secondary"
-          onClick={props.subtract}
-          itemID={props.itemId}
-        >
+        <Button variant="secondary" onClick={props.subtract} itemID={itemId}>
           -
         </Button>
       </Card.Body>

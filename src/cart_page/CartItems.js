@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import CartItem from "./CartItem";
 
 function CartItems(props) {
+  // const updateCart = () => props.updateCart();
   const [items, setItems] = useState([]);
 
   useEffect(() => {
