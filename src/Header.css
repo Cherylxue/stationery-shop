@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+
+/* h3 {
+  justify-self: flex-start;
+}
+
+.header-right {
+  justify-self: flex-end;
+} */
