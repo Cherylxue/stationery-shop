@@ -5,7 +5,6 @@ function CartItem(props) {
   const { data, itemId, quantity } = props;
 
   useEffect(() => {
-    // console.log(props.data);
     data.forEach((element) => {
       if (element.Id.toString() === itemId && quantity > 0) {
         setItemInfo(element);
