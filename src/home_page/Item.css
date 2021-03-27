@@ -16,4 +16,27 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+}
+
+.add-to-cart-btn.btn {
+  width: 8rem;
+  background-color: rgb(118, 184, 223);
+  border: none;
+}
+
+.add-to-cart-btn.btn :active {
+  background-color: rgb(107, 159, 189);
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.add-to-cart-btn.btn:focus {
+  background-color: rgb(107, 159, 189);
+  border: none;
+  outline: none;
+}
+
+.add-to-cart-btn.btn:hover {
+  background-color: rgb(107, 159, 189);
 }

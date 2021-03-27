@@ -10,7 +10,7 @@ function Item(props) {
         <Card.Title>{props.itemName}</Card.Title>
         <h5 className="item-name">${props.itemPrice}</h5>
         <Button
-          variant="primary"
+          className="add-to-cart-btn"
           onClick={props.addToCart}
           itemID={props.itemId}
         >

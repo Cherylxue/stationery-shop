@@ -1,6 +1,9 @@
 .item-result-container {
   display: flex;
   flex-direction: row;
+  margin: 20px 0;
+  border: 1px solid lightgrey;
+  padding: 20px;
 }
 
 .search-bar {
@@ -10,4 +13,30 @@
 
 .nav {
   height: 100%;
+}
+
+.nav-link {
+  color: grey;
+  font-size: medium;
+}
+
+.nav-link:hover {
+  color: black;
+}
+
+.d-block,
+.w-100 {
+  object-fit: cover;
+  height: 300px;
+}
+
+.carousel-caption > p,
+.carousel-caption > h3 {
+  text-shadow: 1px 1px 1px grey;
+}
+
+.home-container {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 100px;
 }

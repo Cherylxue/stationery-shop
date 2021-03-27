@@ -29,15 +29,18 @@ function Home(props) {
 
   return (
     <>
-      <h5>This is promo information</h5>
-      <Carousels />
-      <div className="search-bar">
-        <SearchBar />
-      </div>
+      <div className="home-container">
+        <h5>This is promo information</h5>
 
-      <div className="item-result-container">
-        <NavBar handleClick={handleClick} />
-        <Items data={filterResult} addToCart={props.addToCart} />
+        <Carousels />
+        <div className="search-bar">
+          <SearchBar />
+        </div>
+
+        <div className="item-result-container">
+          <NavBar handleClick={handleClick} />
+          <Items data={filterResult} addToCart={props.addToCart} />
+        </div>
       </div>
     </>
   );

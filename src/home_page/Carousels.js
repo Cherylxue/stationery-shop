@@ -1,10 +1,11 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
+import "./Home.css";
 
 function Carousels() {
   return (
-    <>
-      <Carousel>
+    <div className="carousel-container">
+      <Carousel className="carousel">
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -43,7 +44,7 @@ function Carousels() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-    </>
+    </div>
   );
 }
 
