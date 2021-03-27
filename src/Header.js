@@ -45,11 +45,7 @@ function Header() {
         </Route>
 
         <Route path="/cart">
-          <Cart
-            updateItems={updateItems}
-            itemsInCart={itemsInCart}
-            itemAmount={count}
-          />
+          <Cart updateItems={updateItems} itemsInCart={itemsInCart} />
         </Route>
       </Switch>
     </Router>
