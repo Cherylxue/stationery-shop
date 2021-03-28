@@ -9,7 +9,6 @@ function Header() {
   const [itemsInCart, setItemsInCart] = useState([]);
 
   useEffect(() => {
-    console.log(process.env.PUBLIC_URL);
     let itemCount = 0;
     itemsInCart.forEach((item) => (itemCount += item.quantity));
     setCount(itemCount);
@@ -46,7 +45,11 @@ function Header() {
         </Route>
 
         <Route path={`${process.env.PUBLIC_URL}/cart`}>
-          <Cart updateItems={updateItems} itemsInCart={itemsInCart} />
+        <Cart
+            updateItems={updateItems}
+            itemsInCart={itemsInCart}
+            itemAmount={count}
+          />
         </Route>
       </Switch>
     </Router>

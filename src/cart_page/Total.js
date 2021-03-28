@@ -13,7 +13,7 @@ function Total(props) {
       });
     });
     setTotal(subTotal.toFixed(2));
-  }, [items]);
+  }, [items, data]);
 
   return <h5>Total: ${total}</h5>;
 }

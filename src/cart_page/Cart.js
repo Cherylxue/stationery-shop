@@ -4,6 +4,7 @@ import CheckOut from "./CheckOut";
 import Total from "./Total";
 
 function Cart(props) {
+  const { updateItems } = props;
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [items, setItems] = useState([...props.itemsInCart]);
@@ -14,10 +15,17 @@ function Cart(props) {
       .then((res) => {
         setData(res.items);
         setIsLoading(false);
-        props.updateItems(items);
+        updateItems(items);
       });
-  }, [items]);
+  }, [items, updateItems]);
 
+  function clearCart() {
+    setItems([]);
+  }
+
+  function updateCart(items) {
+    setItems(items);
+  }
   function handleAdd(id) {
     // let id = e.target.attributes.itemId.value;
     let newArr = [...items];
@@ -41,9 +49,10 @@ function Cart(props) {
           data={data}
           handleAdd={handleAdd}
           handleSubtract={handleSubtract}
+          updateCart={updateCart}
         />
         <Total items={items} data={data} />
-        <CheckOut />
+        <CheckOut clearCart={clearCart} itemAmount={props.itemAmount} />
       </div>
     )
   );
