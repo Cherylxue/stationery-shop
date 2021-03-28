@@ -35,7 +35,7 @@ function Header() {
         <div className="header-right">
           <Link to="/">Home </Link>
           {/* need to add funtion changing the amount in cart */}
-          <Link to="/cart">Cart ({count})</Link>
+          <Link to={`${process.env.PUBLIC_URL}/cart`}>Cart ({count})</Link>
         </div>
       </div>
 
@@ -44,7 +44,7 @@ function Header() {
           <Home addToCart={handleAddToCart} />
         </Route>
 
-        <Route path="/cart">
+        <Route path={`${process.env.PUBLIC_URL}/cart`}>
           <Cart updateItems={updateItems} itemsInCart={itemsInCart} />
         </Route>
       </Switch>

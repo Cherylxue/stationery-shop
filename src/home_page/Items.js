@@ -13,7 +13,7 @@ function Items(props) {
             key={data.indexOf(item)}
             itemName={item.Name}
             itemPrice={item.Price}
-            imgSrc={`./img_src/${item.Id}.png`}
+            imgSrc={`${process.env.PUBLIC_URL}/img_src/${item.Id}.png`}
             itemId={item.Id}
             addToCart={props.addToCart}
           />

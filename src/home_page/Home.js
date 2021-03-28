@@ -10,7 +10,7 @@ function Home(props) {
   const [filterResult, setFilterResult] = useState([]);
 
   useEffect(() => {
-    fetch("./item_data.json")
+    fetch(`${process.env.PUBLIC_URL}/item_data.json`)
       .then((res) => res.json())
       .then((res) => {
         setData(res.items);
