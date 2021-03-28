@@ -33,14 +33,14 @@ function Header() {
       <div className="header">
         <h3>Stationery Shop</h3>
         <div className="header-right">
-          <Link to="/">Home </Link>
+          <Link to={`${process.env.PUBLIC_URL}`}>Home </Link>
           {/* need to add funtion changing the amount in cart */}
           <Link to={`${process.env.PUBLIC_URL}/cart`}>Cart ({count})</Link>
         </div>
       </div>
 
       <Switch>
-        <Route exact path="/">
+        <Route exact path={`${process.env.PUBLIC_URL}`}>
           <Home addToCart={handleAddToCart} />
         </Route>
 
