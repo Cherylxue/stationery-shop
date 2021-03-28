@@ -9,6 +9,7 @@ function Header() {
   const [itemsInCart, setItemsInCart] = useState([]);
 
   useEffect(() => {
+    console.log(process.env.PUBLIC_URL);
     let itemCount = 0;
     itemsInCart.forEach((item) => (itemCount += item.quantity));
     setCount(itemCount);
