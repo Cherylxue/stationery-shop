@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import CartItems from "./CartItems";
 import CheckOut from "./CheckOut";
 import Total from "./Total";
+import "./Cart.css";
 
 function Cart(props) {
   const { updateItems } = props;
@@ -43,7 +44,7 @@ function Cart(props) {
 
   return (
     !isLoading && (
-      <div>
+      <div className="cart-container">
         <CartItems
           items={items}
           data={data}

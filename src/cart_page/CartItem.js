@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Card, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import "./Cart.css";
+
 function CartItem(props) {
   const [itemInfo, setItemInfo] = useState({});
   const { data, itemId, quantity } = props;
@@ -14,20 +16,32 @@ function CartItem(props) {
   }, [quantity, data, itemId]);
 
   return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={`./img_src/${itemInfo.Id}.png`} />
-      <Card.Body>
-        <Card.Title>{itemInfo.Name}</Card.Title>
-        <h5>Price: ${itemInfo.Price}</h5>
-        <label>Quantity: {quantity}</label>
-        <Button variant="secondary" onClick={props.add} itemID={props.itemId}>
+    <div className="cart-item-info">
+      <img
+        className="check-out-image"
+        src={`./img_src/${itemInfo.Id}.png`}
+        alt={`${itemInfo.Id}`}
+      ></img>
+      <div>
+        <h6 className="cart-item-name">{itemInfo.Name}</h6>
+        <h6>Price: ${itemInfo.Price}</h6>
+        <label className="item-quantity">Quantity: {quantity}</label>
+        <Button
+          variant="quantity-modifier"
+          onClick={props.add}
+          itemID={props.itemId}
+        >
           +
         </Button>
-        <Button variant="secondary" onClick={props.subtract} itemID={itemId}>
+        <Button
+          variant="quantity-modifier"
+          onClick={props.subtract}
+          itemID={itemId}
+        >
           -
         </Button>
-      </Card.Body>
-    </Card>
+      </div>
+    </div>
   );
 }
 

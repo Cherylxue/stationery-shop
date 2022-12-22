@@ -1,5 +1,6 @@
 import { Button } from "react-bootstrap";
 import React, { useState } from "react";
+import "./Cart.css";
 
 function CheckOut(props) {
   const [isChecking, setIsChecking] = useState(false);
@@ -19,9 +20,13 @@ function CheckOut(props) {
   return (
     <>
       {isChecking ? (
-        <Button disabled={true}>Checking Out...</Button>
+        <Button className="check-out-button" disabled={true}>
+          Checking Out...
+        </Button>
       ) : (
-        <Button onClick={handleClick}>Check Out</Button>
+        <Button className="check-out-button" onClick={handleClick}>
+          Check Out
+        </Button>
       )}
     </>
   );

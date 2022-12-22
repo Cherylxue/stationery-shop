@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CartItem from "./CartItem";
+import "./Cart.css";
 
 function CartItems(props) {
   const [items, setItems] = useState([]);
@@ -11,18 +12,24 @@ function CartItems(props) {
   }, [props.items]);
 
   return (
-    <div className="cart-items-container">
-      {items.map((item) => (
-        <CartItem
-          key={items.indexOf(item)}
-          itemId={item.itemId}
-          quantity={item.quantity}
-          data={props.data}
-          add={() => props.handleAdd(item.itemId)}
-          subtract={() => props.handleSubtract(item.itemId)}
-        />
-      ))}
-    </div>
+    <>
+      {items.length === 0 ? (
+        <h6>Cart is empty</h6>
+      ) : (
+        <div className="cart-items-container">
+          {items.map((item) => (
+            <CartItem
+              key={items.indexOf(item)}
+              itemId={item.itemId}
+              quantity={item.quantity}
+              data={props.data}
+              add={() => props.handleAdd(item.itemId)}
+              subtract={() => props.handleSubtract(item.itemId)}
+            />
+          ))}
+        </div>
+      )}
+    </>
   );
 }
 
